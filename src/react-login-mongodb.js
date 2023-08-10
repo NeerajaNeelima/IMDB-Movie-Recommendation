@@ -1,5 +1,8 @@
+
 const mongoose=require("mongoose")
-mongoose.connect("mongodb+srv://023neeraja:neelima143@cluster0.d5fmcua.mongodb.net/Users")//mongodb://127.0.0.1/react-login-tut
+const url='mongodb+srv://023neeraja:neelima143@cluster0.d5fmcua.mongodb.net/Users?retryWrites=true&w=majority'
+mongoose.connect(url,{useNewUrlParser: "true",
+useUnifiedTopology: "true"})//mongodb://127.0.0.1/react-login-tut --- mongodb+srv://023neeraja:neelima143@cluster0.d5fmcua.mongodb.net/Users
 .then(() =>console.log("mongodb connected"))//mongodb+srv://023neeraja:neelima143@cluster0.d5fmcua.mongodb.net/Users/userlogdin
 .catch((e) =>console.log(e));
 
